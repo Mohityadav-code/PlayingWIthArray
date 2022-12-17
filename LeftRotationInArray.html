@@ -1,0 +1,34 @@
+<!-- Question :If one Array=[1,2,3,4,5] is given and given target to rotate 
+for three times as target=3 the result should be [4,5,1,2,3] -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <H1>Here We are going to perform left rotate opearation in Array </H1>
+    <script>
+        //First we will define Array and One variable i for loop so we don't go beyond traget
+        var Array=[1,2,3,4,5]
+        var target =4
+        var i=0;
+        
+        while(i<target){
+            //here we will first push first element in last of array using push method 
+            Array.push(Array[0])
+            //here we have push 0th element of array because every time we will use shift 
+            //function second element will come on first place
+            Array.shift()
+            //now we will increment i so it can go till target and then stop
+            i++
+        }
+        console.log(Array);
+        //expected Output
+        [5,1,2,3,4]
+        
+    </script>
+  </body>
+</html>
