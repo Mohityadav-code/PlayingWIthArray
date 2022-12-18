@@ -28,7 +28,21 @@ for three times as target=3 the result should be [4,5,1,2,3] -->
         console.log(Array);
         //expected Output
         [5,1,2,3,4]
-        
+             //now we are going to do same with temp[] array
+        var j=0;
+        var temp=[]
+        for(var i=target;i<Array.length;i++){
+          temp[j]=Array[i]
+          console.log(temp,"in first loop");      
+          j++
+        }
+        for(var k=0;k<target;k++){
+          temp[j]=Array[k]
+          console.log(temp,"in second loop");      
+          j++
+        }
+        console.log(temp);
+
     </script>
   </body>
 </html>
