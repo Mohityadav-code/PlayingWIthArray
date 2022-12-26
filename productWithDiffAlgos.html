@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [3, 5, 7, 4];
+      var product = [];
+      for (var tg = 0; tg < arr.length; tg++) {
+        target = arr[tg];
+        // console.log("this is target "+target)
+        console.log("this is target index " + tg + "  : " + target);
+        var prod = 1;
+        var prod1 = 1;
+
+        // left = ()=>
+        for (var i = 0; i < tg; i++) {
+          var left = prod * arr[i];
+          prod = left;
+          //    console.log("this is left "+left)
+          console.log("this is left index " + i + "  : " + arr[i]);
+        }
+        // right=() =>
+        for (var j = tg + 1; j < arr.length; j++) {
+          var right = prod1 * arr[j];
+          prod1 = right;
+          console.log("this is right " + right);
+        }
+        var total = prod * prod1;
+        product.push(total);
+        // console.log("this is product "+product)
+        // console.log( "this is right index "+j + "  : "+arr[j])
+      }
+      console.log(product);
+      console.log("---------------------------------------------------");
+
+      //product with while
+      var array = [3, 5, 7, 4];
+      var target = 0;
+      var arraymultiply = [];
+      while (target < array.length) {
+        var left = [];
+        var right = [];
+        var prod = 1;
+        var prod1 = 1;
+
+        for (var i = 0; i < target; i++) {
+          left.push(array[i]);
+          console.log("left is : " + left);
+          var leftprod = prod * array[i];
+          prod = leftprod;
+          console.log("left prod is  " + leftprod);
+        }
+        for (var j = target + 1; j < array.length; j++) {
+          right.push(array[j]);
+          console.log("right[] is : " + right);
+          var rightprod = prod1 * array[j];
+          prod1 = rightprod;
+          console.log("right prod is " + rightprod);
+        }
+        target++;
+        arraymultiply.push(prod * prod1);
+        console.log("Array [] is : ", arraymultiply);
+      }
+    </script>
+  </body>
+</html>
