@@ -11,20 +11,18 @@
 <body>
     <script>
         var str = "A dam is si mAd a"
-
-
+       //first we need to convert it into lower string
         str = str.toLowerCase()
+        //convert into array
         var arr = Array.from(str)
         console.log(arr);
-        //first we need to convert it into lower string
         console.log(str);
 
         for (i = 0; i < arr.length; i++) {
-        //here first we will remove spaces from string
+            //here first we will remove spaces from string
             if (arr[i] == ' ') {
                 console.log(arr[i]);
-                console.log(`here is space ${arr[i]}`);
-        //here first we will try to do it with inbuilt function
+                //here first we will try to do it with inbuilt function
                 arr.splice(i, 1)
             }
         }
@@ -43,6 +41,60 @@
         else {
             console.log("nope it is not pallindrome");
         }
+
+
+
+        //there is small problem in above program i am working on them 
+        //below program is working fine thank you
+        //here we are going to do it with less complex method
+
+
+
+
+        var str1 = "A man, a plan, a canal: Panama"
+        str1 = str1.toLowerCase()
+        var arr = Array.from(str1)
+        console.log(arr);
+        for (i = 0; i < arr.length; i++) {
+            
+            if (arr[i] == ' ') {
+                arr.splice(i, 1)
+            }
+            if (arr[i] == ':') {
+                arr.splice(i, 2)
+            }
+            if (arr[i] == ',') {
+                arr.splice(i, 2)
+            }
+            
+        }
+        console.log(arr);
+        var flag1 = 0
+        var start = 0
+        var end = arr.length - 1
+
+        while (start < end) {
+            if (arr[start] != arr[end]) {
+                console.log(arr[start],"hello world",arr[end] );
+                flag1 = 1
+
+
+            }
+            start++
+            end--
+        }
+
+
+
+
+
+        if (flag1 == 0) {
+            console.log("yes it is pallindrome");
+        }
+        else {
+            console.log("no it is not pallindorme");
+        }
+
     </script>
 </body>
 
